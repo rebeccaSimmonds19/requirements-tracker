@@ -1,0 +1,9 @@
+import requirements.tracker.Transaction
+
+
+rule "rule 1"
+  when
+    t: Transaction(score<80)
+  then
+    t.setApproved(false);
+end
